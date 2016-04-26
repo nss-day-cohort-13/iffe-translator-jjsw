@@ -10,27 +10,35 @@ var outputDisplay = document.getElementById("ouput-display");
 
 var outPutString = '';
 
+var wordBank = (function(){
+
+	return {};
+
+})();
+
 // choose the language
 if (selectedLanguage.value === "Italian") {
 
-	var getLanguage = wordBank.getItalian;
+	var getLanguage = wordBank.getItalian();
 
 } else if (selectedLanguage.value === "German") {
 
-	var getLanguage = wordBank.getGerman;
+	var getLanguage = wordBank.getGerman();
 
 } else if (selectedLanguage.value === "French") {
 
-	var getLanguage = wordBank.getFrench;
+	var getLanguage = wordBank.getFrench();
 
 } else {
 
-	var getLanguage = wordBank.getIcelandic;
+	var getLanguage = wordBank.getIcelandic();
 
 };
 
 // take user input string and make it an array
 var userArray = userInput.value.split(" ");
+
+console.log("userArray", userArray);
 
 // create processing function
 function wordCheck(element) {
@@ -50,6 +58,7 @@ function translate(element, index, array) {
 
 	// if this is the last time through the array
 	if (index === array.length -1){
+		console.log("outPutString", outPutString)
 		return outPutString;
 	}
 	else{

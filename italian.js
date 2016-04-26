@@ -7,6 +7,5 @@ var wordBank = (function(origArray) {
 	};
 	origArray.getItalian = function(items){
 		return origArray.getItalian[items];
-		}
 	};
 })(wordBank);
