@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+   Translator JJSW
+  </title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+   <h1>Translator JJSW</h1>
+  <form action="form.html">
+  <legend>What is your translation task? </legend>
+  <fieldset>
+    <br/>
+    <label for="input-field">Phrase to translate: </label>
+    <input type="text" id="input-field" placeholder="Enter phrase here"autofocus>
+    <br/>
+    <label for="select-language">Select language: </label>
+    <select id="select-language" name="language">
+      <option>French</option>
+      <option>German</option>
+      <option>Icelandic</option>
+      <option>Italian</option>
+    <br/>
+  </fieldset>
+  
+  <br/>
+  <div>
+  <input type="button" id="translate-button" value="Translate"></input>
+  </div>
+  
+  <div id="output-display"></div>
+
+  </form>
+</body>
+
+<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+</html>
