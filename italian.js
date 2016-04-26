@@ -3,9 +3,12 @@ var wordBank = (function(origArray) {
 	var italianWords = {
 		"happy":"felice",
 		"new":"nuovo",
-		"year":"anno"
-	};
-	origArray.getItalian = function(item){
+		"year":"anno"};
+
+	origArray.getItalian = function(item) {
 		return origArray.italianWords[item];
 	};
+
+	return origArray;
+	
 })(wordBank);
