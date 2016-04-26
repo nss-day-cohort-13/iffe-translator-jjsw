@@ -30,3 +30,18 @@ if (selectedLanguage.value === "Italian") {
 // take user input string and make it an array
 var userArray = userInput.value.split(" ");
 
+// create processing function
+function wordCheck(element) {
+
+	if (getLanguage(element)){ // if he element is found
+		return element;
+	} else 
+	{
+	 	return;
+	}
+}
+
+// process each word in the array and compare it against the wordbank dictionary for the specified language
+
+userArray.filter(wordCheck())
+
