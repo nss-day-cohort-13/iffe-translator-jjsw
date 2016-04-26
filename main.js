@@ -2,11 +2,13 @@
 // create variables in which to store input info
 var userInput = document.getElementById("input-field");
 
-var selectedLanguage = document.getElementById("selected-language");
+var selectedLanguage = document.getElementById("select-language");
 
 var translateButton = document.getElementById("translate-button");
 
 var outputDisplay = document.getElementById("ouput-display");
+
+var outPutString = '';
 
 // choose the language
 if (selectedLanguage.value === "Italian") {
@@ -33,7 +35,7 @@ var userArray = userInput.value.split(" ");
 // create processing function
 function wordCheck(element) {
 
-	if (getLanguage(element)){ // if he element is found
+	if (getLanguage[element]){ // if he element is found
 		return element;
 	} else 
 	{
@@ -41,7 +43,20 @@ function wordCheck(element) {
 	}
 }
 
+// create translating function
+function translate(element, index, array) {
+
+	outPutString = getLanguage[element] + " ";
+
+	// if this is the last time through the array
+	if (index === array.length -1){
+		return outPutString;
+	}
+	else{
+		return;
+	}
+}
 // process each word in the array and compare it against the wordbank dictionary for the specified language
 
-userArray.filter(wordCheck())
+userArray.filter(wordCheck()).forEach(translate);
 
