@@ -5,8 +5,7 @@ var wordBank = (function(origArray) {
 		"new":"nuovo",
 		"year":"anno"
 	};
-	origArray.getItalian = function(items){
-		return origArray.getItalian[items];
-		}
+	origArray.getItalian = function(item){
+		return origArray.italianWords[item];
 	};
 })(wordBank);
