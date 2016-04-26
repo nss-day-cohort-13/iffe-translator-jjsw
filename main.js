@@ -10,7 +10,7 @@ var outputDisplay = document.getElementById("ouput-display");
 
 var outPutString = '';
 
-var wordBank = (function(){
+var wordBank = (function() {
 
 	return {};
 
@@ -29,7 +29,7 @@ if (selectedLanguage.value === "Italian") {
 
 	var getLanguage = wordBank.getFrench();
 
-} else {
+} else if (selectedLanguage.value === "Icelandic") {
 
 	var getLanguage = wordBank.getIcelandic();
 
