@@ -9,35 +9,33 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-   <h1>Translator JJSW</h1>
+  <h1>Translator JJSW</h1>
   <form action="form.html">
   <legend>What is your translation task? </legend>
   <fieldset>
     <br/>
     <label for="input-field">Phrase to translate: </label>
     <input type="text" id="input-field" placeholder="Enter phrase here"autofocus>
-
-      <label for="select-language">Select language: </label>
-      <select id="select-language" name="language">
-        <option>French</option>
-        <option>German</option>
-        <option>Icelandic</option>
-        <option>Italian</option>
-      </select>
-      <p>
+    <label for="select-language">Select language: </label>
+    <select id="select-language" name="language">
+      <option>Please select a language:</option>
+      <option>French</option>
+      <option>German</option>
+      <option>Icelandic</option>
+      <option>Italian</option>
+    </select>
+    <p>
       <input type="button" id="translate-button" value="Translate"></input>
-      </p>
+    </p>
   </fieldset>
-  
+
   <br/>
-  
-  
-  
+
   <div id="output-display"></div>
 </form>
-  
+
 </body>
 
-<script src="italian.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="italian.js" type="text/javascript" charset="utf-8" async defer></script>
 </html>
