@@ -3,7 +3,26 @@ var wordBank = (function(origObj) {
 
 		"happy":"hamingjusamur",
 		"new":"ný",
-		"year":"ári"};
+		"year":"ári"
+		"merry" : "Gleðileg",
+		"christmas" : "jól",
+		"hannukah" : "hannukah",
+		"holidays" : "frí",
+		"thanksgiving" : "þakkargjörð",
+		"birthday" : "afmæli",
+		"the" : "sem",
+		"and" : "og",
+		"of" : "af",
+		"season" : "árstíð",
+		"good" : "gott",
+		"tidings" : "tíðindi",
+		"festivus" : "festivus",
+		"for" : "fyrir",
+		"a" : "a",
+		"rest" : "hvíld",
+		"us" : "okkur",
+		"congratulations" : "til hamingju",
+		"graduation" : "útskrift"};
 
 	origObj.getIcelandic = function(item) {
 
