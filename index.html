@@ -24,6 +24,7 @@
         </select>
         <p>
           <input type="button" id="translate-button" value="Translate" onclick="setup(value)"></input>
+          <input onclick='responsiveVoice.speak(outputDisplay.innerHTML);' type='button' value='🔊 Play' />
         </p>
       </fieldset>
     <br/>
@@ -34,5 +35,6 @@
 <script src="iceland.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="french.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="german.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </body>
 </html>
