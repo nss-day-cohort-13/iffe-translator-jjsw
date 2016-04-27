@@ -3,7 +3,7 @@ var wordBank = (function(origObj) {
 
 		"happy":"hamingjusamur",
 		"new":"ný",
-		"year":"ári"
+		"year":"ári",
 		"merry" : "Gleðileg",
 		"christmas" : "jól",
 		"hannukah" : "hannukah",

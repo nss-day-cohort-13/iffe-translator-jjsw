@@ -1,0 +1,27 @@
+/*-------------------------------
+
+ELEMENTS
+
+--------------------------------*/
+
+
+h1 {
+	text-align: center;
+}
+
+
+/*-------------------------------
+
+LAYOUT
+
+--------------------------------*/
+
+#main-wrapper {
+	width: 85%;
+	margin: 0 auto;
+}
+
+#output-display {
+	text-align: center;
+	padding-top: 30px;
+}
