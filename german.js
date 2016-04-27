@@ -4,7 +4,26 @@ var wordBank = (function(origObj) {
 	var germanWords = {
 		"happy": "frohes",
 		"new": "neues",
-		"year": "jahr"
+		"year": "jahr",
+		"merry" : "Fröhliche",
+		"christmas" : "Weihnachten",
+		"hannukah" : "hannukah",
+		"holidays" : "ferien",
+		"thanksgiving" : "Danksagung",
+		"birthday" : "Geburtstag",
+		"the" : "der",
+		"and" : "und",
+		"of" : "von",
+		"season" : "jahreszeit",
+		"good" : "gute",
+		"tidings" : "Nachrichten",
+		"festivus" : "festivus",
+		"for" : "für",
+		"a" : "ein",
+		"rest" : "rest",
+		"us" : "uns",
+		"congratulations" : "Herzliche Glückwünsche",
+		"graduation" : "Graduierung"
 	};
 
 	origObj.getGerman = function(item) {
