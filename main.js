@@ -21,7 +21,7 @@ function setup() {
 	if (selectedLanguage.value === "Italian") {
 
 		getLanguage = wordBank.getItalian;
-		console.log("after italian selected getLanguage = ", getLanguage);
+		// console.log("after italian selected getLanguage = ", getLanguage);
 
 	} else if (selectedLanguage.value === "German") {
 
@@ -44,13 +44,13 @@ function setup() {
 	// create processing function
 	function wordCheck(element) {
 
-		console.log("inside wordCheck. wordBank = ", wordBank);
-		console.log("element = ", element);
+		// console.log("inside wordCheck. wordBank = ", wordBank);
+		// console.log("element = ", element);
 		// console.log("getLanguage = ", typeof(getLanguage));
 
 		// if (getLanguage(element)){ // if the element is found
 		if(getLanguage(element)) {
-			console.log("This is working as a non-function", getLanguage);
+			// console.log("This is working as a non-function", getLanguage);
 			return element;
 		} else {
 		 	return;
