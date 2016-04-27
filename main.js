@@ -21,7 +21,6 @@ function setup() {
 	if (selectedLanguage.value === "Italian") {
 
 		getLanguage = wordBank.getItalian;
-		// console.log("after italian selected getLanguage = ", getLanguage);
 
 	} else if (selectedLanguage.value === "German") {
 
@@ -39,31 +38,30 @@ function setup() {
 
 	// take user input string and make it an array
 	var userArray = userInput.value.split(" ");
-	// console.log("userArray", userArray);
 
-	// create processing function
+	// this function checks
 	function wordCheck(element) {
 
-		// console.log("inside wordCheck. wordBank = ", wordBank);
-		// console.log("element = ", element);
-		// console.log("getLanguage = ", typeof(getLanguage));
-
-		// if (getLanguage(element)){ // if the element is found
-		if(getLanguage(element)) {
-			// console.log("This is working as a non-function", getLanguage);
+		// if the element is found in the specified language's dictionary, return it
+		if (getLanguage(element)) {
 			return element;
+
+		// otherwise, throw it away
 		} else {
 		 	return;
 		}
 	}
 
-	// create translating function
+	// Translating function. At this point, each element is a known good word that exists in the dictonary and its just 
+	// a matter of returning it in the language specified
 	function translate(element, index, array) {
 
-		outPutString = getLanguage[element] + " ";
+		outPutString = getLanguage(element) + " ";
+
+		console.log("element in translate = ", element);
 
 		// if this is the last time through the array
-		if (index === array.length -1){
+		if (index === array.length -1 || array.length === 1) {
 			console.log("outPutString", outPutString)
 			return outPutString;
 		}
@@ -76,4 +74,3 @@ function setup() {
 console.log("Output", userArray.filter(wordCheck).forEach(translate));
 
 }
-
