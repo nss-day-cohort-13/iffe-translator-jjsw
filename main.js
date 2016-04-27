@@ -56,13 +56,13 @@ function setup() {
 	// a matter of returning it in the language specified
 	function translate(element, index, array) {
 
-		outPutString = getLanguage(element) + " ";
+		outPutString += getLanguage(element) + " ";
 
 		console.log("element in translate = ", element);
 
 		// if this is the last time through the array
 		if (index === array.length -1 || array.length === 1) {
-			console.log("outPutString", outPutString)
+			console.log("outPutString", outPutString);
 			return outPutString;
 		}
 		else{
@@ -70,7 +70,7 @@ function setup() {
 		}
 	}
 
-// process each word in the array and compare it against the wordbank dictionary for the specified language
-console.log("Output", userArray.filter(wordCheck).forEach(translate));
+	// process each word in the array and compare it against the wordbank dictionary for the specified language
+	console.log("Output", userArray.filter(wordCheck).forEach(translate));
 
 }
