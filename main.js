@@ -65,17 +65,13 @@ function setup() {
 
 		// if this is the last time through the array
 		if (index === array.length -1 || array.length === 1) {
-			console.log("outPutString", outPutString)
+			console.log("outPutString", outPutString);
 			return outPutString;
 		}
 		else{
 			return;
 		}
 	}
-
-// process each word in the array and compare it against the wordbank dictionary for the specified language
-console.log("Output", userArray.filter(wordCheck).forEach(translate));
-console.log("Output", outPutString);
 
 outputDisplay.innerHTML = outPutString;
 }
