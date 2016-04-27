@@ -10,62 +10,70 @@ var outputDisplay = document.getElementById("ouput-display");
 
 var outPutString = '';
 
-var wordBank = (function() {
+var getLanguage;
 
-	return {};
-
-})();
+// define the main iife
+var wordBank = (function() { return {};})();
 
 // choose the language
-if (selectedLanguage.value === "Italian") {
+function setup() {
 
-	var getLanguage = wordBank.getItalian();
+	if (selectedLanguage.value === "Italian") {
 
-} else if (selectedLanguage.value === "German") {
+		getLanguage = wordBank.getItalian;
+		console.log("after italian selected getLanguage = ", getLanguage);
 
-	var getLanguage = wordBank.getGerman();
+	} else if (selectedLanguage.value === "German") {
 
-} else if (selectedLanguage.value === "French") {
+		getLanguage = wordBank.getGerman;
 
-	var getLanguage = wordBank.getFrench();
+	} else if (selectedLanguage.value === "French") {
 
-} else if (selectedLanguage.value === "Icelandic") {
+		getLanguage = wordBank.getFrench;
 
-	var getLanguage = wordBank.getIcelandic();
+	} else if (selectedLanguage.value === "Icelandic") {
 
-};
+		getLanguage = wordBank.getIcelandic;
 
-// take user input string and make it an array
-var userArray = userInput.value.split(" ");
+	};
 
-console.log("userArray", userArray);
+	// take user input string and make it an array
+	var userArray = userInput.value.split(" ");
+	// console.log("userArray", userArray);
 
-// create processing function
-function wordCheck(element) {
+	// create processing function
+	function wordCheck(element) {
 
-	if (getLanguage[element]){ // if he element is found
-		return element;
-	} else 
-	{
-	 	return;
+		console.log("inside wordCheck. wordBank = ", wordBank);
+		console.log("element = ", element);
+		// console.log("getLanguage = ", typeof(getLanguage));
+
+		// if (getLanguage(element)){ // if the element is found
+		if(getLanguage(element)) {
+			console.log("This is working as a non-function", getLanguage);
+			return element;
+		} else {
+		 	return;
+		}
 	}
-}
 
-// create translating function
-function translate(element, index, array) {
+	// create translating function
+	function translate(element, index, array) {
 
-	outPutString = getLanguage[element] + " ";
+		outPutString = getLanguage[element] + " ";
 
-	// if this is the last time through the array
-	if (index === array.length -1){
-		console.log("outPutString", outPutString)
-		return outPutString;
+		// if this is the last time through the array
+		if (index === array.length -1){
+			console.log("outPutString", outPutString)
+			return outPutString;
+		}
+		else{
+			return;
+		}
 	}
-	else{
-		return;
-	}
-}
+
 // process each word in the array and compare it against the wordbank dictionary for the specified language
+console.log("Output", userArray.filter(wordCheck).forEach(translate));
 
-userArray.filter(wordCheck()).forEach(translate);
+}
 

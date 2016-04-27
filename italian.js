@@ -1,14 +1,20 @@
-var wordBank = (function(origArray) {
-	var translated = [];
+
+var wordBank = (function(origObj) {
+	console.log("Inside wordBank italy", typeof(origObj));
 	var italianWords = {
 		"happy":"felice",
 		"new":"nuovo",
 		"year":"anno"};
 
-	origArray.getItalian = function(item) {
-		return origArray.italianWords[item];
+	origObj.getItalian = function(item) {
+		// return origObj.italianWords[item];
+		if(item) {
+			return origObj.italianWords[item];
+		}
+		return "VOID";
 	};
 
-	return origArray;
-	
+	return origObj;
+
 })(wordBank);
+
