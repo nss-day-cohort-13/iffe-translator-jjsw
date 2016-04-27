@@ -6,7 +6,7 @@ var selectedLanguage = document.getElementById("select-language");
 
 var translateButton = document.getElementById("translate-button");
 
-var outputDisplay = document.getElementById("ouput-display");
+var outputDisplay = document.getElementById("output-display");
 
 var outPutString = '';
 
@@ -17,6 +17,8 @@ var wordBank = (function() { return {};})();
 
 // choose the language
 function setup() {
+
+	var outPutString = "";
 
 	if (selectedLanguage.value === "Italian") {
 
@@ -37,6 +39,7 @@ function setup() {
 	};
 
 	// take user input string and make it an array
+	// userInput = userInput.value.toLowerCase();
 	var userArray = userInput.value.split(" ");
 
 	// this function checks
@@ -52,11 +55,11 @@ function setup() {
 		}
 	}
 
-	// Translating function. At this point, each element is a known good word that exists in the dictonary and its just 
+	// Translating function. At this point, each element is a known good word that exists in the dictonary and its just
 	// a matter of returning it in the language specified
 	function translate(element, index, array) {
 
-		outPutString = getLanguage(element) + " ";
+		outPutString += getLanguage(element) + " ";
 
 		console.log("element in translate = ", element);
 
@@ -72,5 +75,7 @@ function setup() {
 
 // process each word in the array and compare it against the wordbank dictionary for the specified language
 console.log("Output", userArray.filter(wordCheck).forEach(translate));
+console.log("Output", outPutString);
 
+outputDisplay.innerHTML = outPutString;
 }
